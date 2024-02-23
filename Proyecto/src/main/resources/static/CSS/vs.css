@@ -1,0 +1,343 @@
+:root {
+    --main-color: #4b33a8;
+    --MAIN-DARK: #785ce9;
+    --white: #ececec;
+    --gray: #e2e2e2;
+    --red: #961818;
+}
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.loading-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(77, 77, 77, 0.308); /* Fondo semi-transparente con difuminado */
+    backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo */
+    z-index: 9999; /* Z-index alto para estar en la parte superior */
+}
+
+/* Estilos para el GIF de carga */
+.loading-spinner {
+    width: 100px;
+    height: 100px;
+}
+
+.favorita {
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+}
+.card__star {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.carrera__favorite {
+    position: absolute;
+    right: 1em;
+
+}
+
+/* estrella normal */
+.no-favorita {
+	cursor: pointer;
+    width: 27px;
+    height: 27px;
+    filter: invert(1);
+    background-color: transparent;
+}
+
+/* estrella amarilla */
+.favorita {
+	cursor: pointer;
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+}
+
+/*VERSION MOBILE - COMIENZA CON ESTILOS PARA MOBILE*/
+
+/*HEADER*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    align-items: center;
+    height: 100px;
+    background-color: #411a8b;
+    z-index: 999999999999999999999;
+}
+
+.header__logo {
+    width: 70px;
+    height: 70px;
+    margin-left: 32px;
+}
+
+.main-nav {
+    width: 70%;
+    height: 100vh;
+    padding: 1em;
+    min-width: 160px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: none;
+}
+
+.main-menu__link {
+    color: white;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.main-menu__link:hover {
+    background-color: #fff;
+    color: #411a8b;
+}
+/**APARECER MENU*/
+
+.main-nav--visible {
+    display: block;
+    background-color: #411a8b;
+    height: 100vh;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    text-align: center;
+    margin-top: 4em;
+}
+
+.header__x {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+    filter: invert(1);
+    width: 40px;
+    height: 40px;
+}
+
+.header__menu {
+    cursor: pointer;
+    filter: invert(1);
+    width: 40px;
+    height: 40px;
+}
+
+.obtetivo__textos {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.card__title {
+    padding: 20px;
+    /* limita el espacio del nombre
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;*/
+}
+
+/*FOOOTER*/
+
+.footer {
+    position: fixed;
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    gap: 3em;
+    position: absolute;
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.footer__contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+.footer__contact-icon {
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+.footer__social {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+}
+
+.footer__social:hover {
+    cursor: pointer;
+}
+
+.footer__icon {
+    filter: invert(1);
+    width: 20px;
+}
+
+/**HEADER DESKTOP*/
+@media screen and (min-width: 500px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em;
+        align-items: center;
+        background-color: var(--main-color);
+    }
+
+    .main-nav {
+        position: static;
+        display: block;
+        width: auto;
+        height: auto;
+    }
+
+    .main-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+        margin-top: 0;
+        color: #fff;
+    }
+
+    .header__x {
+        display: none;
+    }
+    .header__menu {
+        display: none;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--white);
+}
+main {
+    background-color: var(--white);
+    padding-bottom: 5em;
+}
+
+.comparacion {
+    display: flex;
+    gap: 2em;
+    margin-top: 3em;
+    background-color: var(--white);
+}
+
+.objetivo__title {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: stretch; /* Ajusta la altura de las cards para que sean iguales */
+    margin: 0 auto;
+    background-color: var(--white);
+    width: 100%;
+    gap: 3em;
+}
+
+.card__title {
+    margin-top: 1em;
+    text-align: center;
+}
+
+.card {
+    flex: 1;
+    max-width: 500px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card__image {
+    width: 100%;
+}
+
+.bi {
+    margin-right: 2em;
+    color: var(--main-color);
+    font-size: 1.5rem;
+}
+
+.accordion__parrafo-acreditacion {
+    text-transform: uppercase;
+    text-align: center;
+}
+.accordion__parrafo {
+    text-align: center;
+}
+
+.accordion-button {
+    background-color: var(--main-color);
+}
+
+/**FOOTER*/
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.footer__contact {
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+}
+
+.footer__social {
+    gap: 2em;
+}

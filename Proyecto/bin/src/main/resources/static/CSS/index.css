@@ -1,0 +1,271 @@
+:root {
+    --primary-color: #0d0f1b;
+    --primary-font-color: #d8d6d6;
+    --button-bg: #d3394c;
+    --primary: #1a132b;
+    --secondary: #2c214c;
+    --third: #7d5cdc;
+    --test: #201835;
+    --white: #fff;
+}
+
+* {
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/*VERSION MOBILE - COMIENZA CON ESTILOS PARA MOBILE*/
+
+/*HEADER*/
+
+.header {
+    position: sticky;
+    width: auto;
+    border-radius: 5px;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #1a132b;
+
+    padding: 1em;
+}
+
+.header__hamburguer {
+    display: block;
+    width: 40px;
+    filter: invert(1);
+}
+
+.header__hamburguer:hover {
+    cursor: pointer;
+}
+
+.main-nav {
+    display: none;
+    width: 100%;
+}
+
+.main-menu__link {
+    color: var(--primary-font-color);
+}
+
+.main-menu__link--register {
+    /* background-color: #ac2812; */
+    background-color: #d3394c;
+
+    padding: 0.5em;
+
+    border-radius: 5px;
+}
+
+.main-nav--active {
+    display: block;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+}
+
+#particles-js {
+    position: fixed; /* Puedes usar 'absolute' en lugar de 'fixed' según tus necesidades */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegura que esté detrás del contenido */
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* background-color: #0d0f1b; */
+    background-color: #201835;
+    background-color: #1a132b;
+    color: #d8d6d6;
+    /* color: #b1acac; */
+    font-family: 'Inter', sans-serif;
+}
+
+/*MAIN*/
+
+/*HEROO*/
+
+input {
+    padding: 0.3em;
+    border-radius: 5px;
+    border: solid black 1px;
+    outline: none;
+}
+
+/*HERO - WELCOME*/
+
+.hero__welcome {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero__title {
+    text-align: left;
+    font-size: 2.3rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* HERO - PRESENTACION*/
+.presentation {
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+
+    text-align: center;
+    margin-top: 2em;
+}
+
+.presentation__title {
+    font-size: 2rem;
+}
+.presentation__title--span {
+    /* color: #ac2812; */
+    /* color: #d3394c; */
+    color: #c93849;
+}
+
+.presentation__text {
+    line-height: 2;
+}
+.presentation__img {
+    width: 300px;
+}
+
+/*OBJETIVO*/
+
+.objetivo {
+    display: grid;
+    gap: 1em;
+    margin: 1em;
+}
+
+.obtetivo__textos {
+    text-align: center;
+}
+
+.objetivo__title {
+    font-size: 2rem;
+}
+.objetivo__title--span {
+    /* color: #ac2812; */
+    color: #d3394c;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: #1c1e2e solid 1px;
+    background-color: var(--test);
+    padding: 2em;
+    border-radius: 15px;
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card:hover {
+    border: solid #7d5cdc 1px;
+}
+
+.card__text {
+    line-height: 2;
+    color: #9b9494;
+}
+
+/*FOOOTER*/
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.footer__social {
+    display: flex;
+    gap: 2em;
+}
+
+.footer__social:hover {
+    cursor: pointer;
+}
+
+.footer__icon {
+    filter: invert(1);
+    width: 30px;
+}
+
+/*VERSION DESKTOP*/
+@media screen and (min-width: 660px) {
+    .header__hamburguer {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+        width: auto;
+    }
+
+    .main-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        text-align: right;
+    }
+
+    .hero {
+    }
+
+    .hero__welcome {
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .presentation {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .presentation__texts {
+        text-align: left;
+        padding: 1em;
+        max-width: 500px;
+        line-height: 1.5;
+    }
+
+    /*OBJETIVO*/
+
+    .objetivo {
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}

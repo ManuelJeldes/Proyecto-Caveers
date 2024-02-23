@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #0d0f1b;
+    --primary-font-color: #d8d6d6;
+    --button-bg: #d3394c;
+    --primary: #1a132b;
+    --secondary: #2c214c;
+    --third: #7d5cdc;
+
+    --white: #fff;
+}
+
+input {
+    outline: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* background-color: transparent; */
+    /* background-color: #171031; */
+
+    /* background-color: transparent; */
+
+    padding: 1em;
+}
+
+.header__hamburguer {
+    display: block;
+    width: 40px;
+    filter: invert(1);
+}
+
+.header__hamburguer:hover {
+    cursor: pointer;
+}
+
+.main-nav {
+    display: none;
+    width: 100%;
+}
+
+.main-menu__link {
+    color: var(--primary-font-color);
+}
+
+.main-menu__link--register {
+    /* background-color: #ac2812; */
+    background-color: #d3394c;
+
+    padding: 0.5em;
+
+    border-radius: 5px;
+}
+
+.main-nav--active {
+    display: block;
+}
+
+.main-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--primary);
+    color: #000;
+}
+
+h2 {
+    color: var(--primary-font-color);
+    margin-bottom: 2em;
+}
+
+.form-register {
+    border: solid white 1px;
+    padding: 2em;
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.input-padding {
+    padding-left: 4em;
+}
+
+.container-relative {
+    position: relative;
+}
+
+.icon-absolute {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 7px;
+    bottom: 5px;
+}
+
+.btn {
+    background-color: var(--button-bg);
+    color: var(--primary-font-color);
+}
+
+.btn:hover {
+    background-color: var(--button-bg);
+    color: var(--primary-font-color);
+}
+
+/*LOGIN*/
+.form-login {
+    padding: 2em;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+@media screen and (min-width: 660px) {
+    .header__hamburguer {
+        display: none;
+    }
+
+    .main-nav {
+        display: block;
+        width: auto;
+    }
+
+    .main-menu {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+        text-align: right;
+    }
+}
